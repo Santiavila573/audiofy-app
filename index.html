@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Audiofy - La mejor experiencia para escuchar tus audiolibros y podcasts favoritos con un diseño moderno y minimalista." />
+    <title>Audiofy | Tu Universo Sonoro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-green': '#1ED760',
+              'brand-green-dark': '#1AB050',
+              'brand-black': '#090909',
+              'brand-black-soft': '#121212',
+              'brand-gray': {
+                '100': '#EBEBEB',
+                '200': '#B3B3B3',
+                '300': '#727272',
+                '400': '#2A2A2A',
+                '500': '#1A1A1A',
+                '600': '#121212',
+                '700': '#0F0F0F',
+              },
+              'accent': '#1ED760',
+              'surface': {
+                'low': 'rgba(255, 255, 255, 0.05)',
+                'medium': 'rgba(255, 255, 255, 0.1)',
+                'high': 'rgba(255, 255, 255, 0.2)',
+              }
+            },
+            fontFamily: {
+              sans: ['"Outfit"', 'system-ui', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'bubbleFloat 6s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+      body {
+        font-family: 'Outfit', 'system-ui', 'sans-serif';
+        letter-spacing: -0.01em;
+      }
+    </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-black text-brand-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

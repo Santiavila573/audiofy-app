@@ -1,0 +1,6 @@
+
+{
+  "name": "Audiofy - Reproductor de Audiolibros y Podcasts",
+  "description": "Una aplicación web clon de Spotify para escuchar y gestionar audiolibros y podcasts, utilizando el almacenamiento local del navegador para la persistencia de datos. Cuenta con una interfaz moderna, reproductor de audio, gestión de listas de reproducción y recomendaciones personalizadas.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,146 @@
+import { AudioContent, ContentType, Playlist, UserProfile } from './types';
+
+export const MOCK_USER: UserProfile = {
+  id: 'user-1',
+  name: 'Alex Doe',
+  avatar: 'https://i.pravatar.cc/150?u=alexdoe',
+};
+
+export const MOCK_AUDIO_CONTENT: AudioContent[] = [
+  {
+    id: 'book-1',
+    title: 'El Proyecto Hail Mary',
+    author: 'Andy Weir',
+    description: 'Ryland Grace es el único superviviente en una misión desesperada. Es la única oportunidad de la humanidad. Y ahora, está solo.',
+    type: ContentType.Audiobook,
+    coverArt: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1603233883l/54493401.jpg',
+    duration: 9600, // 2h 40m
+    genre: ['Ciencia Ficción', 'Thriller'],
+    narrator: 'Ray Porter',
+    audioUrl: 'https://archive.org/download/librivox-short-story-collection-001/ssc001_01_thecelebratedjumpingfrog_twain_64kb.mp3',
+    lyrics: [
+      { time: 0, text: "Capítulo 1: La Misión" },
+      { time: 10, text: "Ryland Grace se despertó en una nave espacial desconocida." },
+      { time: 20, text: "No recordaba cómo había llegado allí." },
+      { time: 30, text: "Pero sabía que la humanidad dependía de él." },
+      { time: 40, text: "El sol se estaba muriendo, y él era la última esperanza." },
+      { time: 50, text: "Con determinación, comenzó a explorar la nave." },
+      { time: 60, text: "Cada paso era un recordatorio de su soledad." },
+      { time: 70, text: "Pero también de su propósito." },
+      { time: 80, text: "La ciencia sería su guía en esta odisea cósmica." },
+      { time: 90, text: "Y la ingeniosidad humana, su arma más poderosa." },
+      { time: 100, text: "Capítulo 2: El Despertar" },
+      { time: 110, text: "Mientras exploraba, encontró los primeros indicios." },
+      { time: 120, text: "La nave estaba equipada con tecnología alienígena." },
+      { time: 130, text: "Pero también con sistemas humanos familiares." },
+      { time: 140, text: "Comenzó a entender su misión." },
+      { time: 150, text: "Debía encontrar una manera de salvar el sol." },
+      { time: 160, text: "O al menos, encontrar aliados en las estrellas." },
+      { time: 170, text: "La soledad se convirtió en su compañera constante." },
+      { time: 180, text: "Pero la esperanza nunca lo abandonó." },
+      { time: 190, text: "Capítulo 3: Primeros Descubrimientos" },
+      { time: 200, text: "Los primeros experimentos revelaron maravillas." },
+      { time: 210, text: "Tecnología que desafiaba las leyes de la física." },
+      { time: 220, text: "Pero también peligros inimaginables." },
+      { time: 230, text: "Ryland aprendió a adaptarse rápidamente." },
+      { time: 240, text: "Su ingenio se convirtió en su mayor fortaleza." },
+      { time: 250, text: "Cada día traía nuevos desafíos." },
+      { time: 260, text: "Y cada desafío, nuevas oportunidades." },
+      { time: 270, text: "La nave se convirtió en su hogar." },
+      { time: 280, text: "Y la misión, en su razón de ser." },
+    ],
+  },
+  {
+    id: 'book-2',
+    title: 'Dune',
+    author: 'Frank Herbert',
+    description: 'La historia de Paul Atreides, el brillante y dotado joven nacido en un gran destino más allá de su comprensión.',
+    type: ContentType.Audiobook,
+    coverArt: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414l/44767458.jpg',
+    duration: 12600, // 3h 30m
+    genre: ['Ciencia Ficción', 'Aventura'],
+    narrator: 'Scott Brick',
+    audioUrl: 'https://archive.org/download/librivox-short-story-collection-001/ssc001_02_tobymudge_64kb.mp3',
+  },
+  {
+    id: 'book-3',
+    title: 'Cien Años de Soledad',
+    author: 'Gabriel García Márquez',
+    description: 'La historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo.',
+    type: ContentType.Audiobook,
+    coverArt: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327881361l/320.jpg',
+    duration: 8640, // 2h 24m
+    genre: ['Realismo Mágico', 'Clásico'],
+    narrator: 'Gustavo Bonfigli',
+    audioUrl: 'https://archive.org/download/librivox-short-story-collection-001/ssc001_03_acaseofconscience_armstrong_64kb.mp3',
+  },
+  {
+    id: 'book-4',
+    title: 'El Problema de los Tres Cuerpos',
+    author: 'Cixin Liu',
+    description: 'Ambientada en el telón de fondo de la Revolución Cultural de China, una sociedad secreta militar envía señales al espacio para establecer contacto con extraterrestres.',
+    type: ContentType.Audiobook,
+    coverArt: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415428227l/20518872.jpg',
+    duration: 10800, // 3h
+    genre: ['Ciencia Ficción'],
+    narrator: 'Luke Daniels',
+    audioUrl: 'https://archive.org/download/librivox-short-story-collection-001/ssc001_04_themanandthesnake_bierce_64kb.mp3',
+  },
+  {
+    id: 'podcast-1',
+    title: 'Nadie Sabe Nada',
+    author: 'Andreu Buenafuente y Berto Romero',
+    description: 'Un programa de radio y podcast de humor e improvisación.',
+    type: ContentType.Podcast,
+    coverArt: 'https://static-2.ivoox.com/canales/3/7/7/8/3778164_XL.jpg',
+    duration: 3600, // 1h
+    genre: ['Comedia', 'Improvisación'],
+    audioUrl: 'https://archive.org/download/librivox-short-story-collection-001/ssc001_05_thephilosopherintheappleorchard_hope_64kb.mp3',
+  },
+  {
+    id: 'podcast-2',
+    title: 'La Escóbula de la Brújula',
+    author: 'Varios anfitriones',
+    description: 'Podcast de divulgación histórica, viajes y misterios.',
+    type: ContentType.Podcast,
+    coverArt: 'https://static-2.ivoox.com/canales/1/1/6/3/116327_XL.jpg',
+    duration: 7200, // 2h
+    genre: ['Historia', 'Misterio'],
+    audioUrl: 'https://archive.org/download/librivox-short-story-collection-001/ssc001_06_thetriumphs_of_a_taxidermist_wells_64kb.mp3',
+  },
+  {
+    id: 'podcast-3',
+    title: 'The Daily',
+    author: 'The New York Times',
+    description: 'Veinte minutos al día, cinco días a la semana, presentados por Michael Barbaro y Sabrina Tavernise y respaldados por el mejor periodismo del mundo.',
+    type: ContentType.Podcast,
+    coverArt: 'https://content.production.cdn.art19.com/images/b2/89/3a/86/b2893a86-b535-4395-8a6a-6199c0a6a482/335d8cf12e5c84d72863c0a5b29b7161b17d3b378e9042b3c2992a5df263595b210dd915f0132b3543666d628292c28659105267c76893666f281438965f4d89.jpeg',
+    duration: 1800, // 30m
+    genre: ['Noticias', 'Actualidad'],
+    audioUrl: 'https://archive.org/download/librivox-short-story-collection-001/ssc001_07_thewolvesofcernogratz_saki_64kb.mp3',
+  },
+];
+
+export const MOCK_PLAYLISTS: Playlist[] = [
+  {
+    id: 'playlist-1',
+    name: 'Favoritos de Ciencia Ficción',
+    description: 'Mis audiolibros de ciencia ficción preferidos.',
+    coverArt: 'https://picsum.photos/seed/scifi/400/400',
+    items: ['book-1', 'book-4', 'book-2'],
+  },
+  {
+    id: 'playlist-2',
+    name: 'Para el Viaje',
+    description: 'Podcasts interesantes para escuchar en la carretera.',
+    coverArt: 'https://picsum.photos/seed/roadtrip/400/400',
+    items: ['podcast-1', 'podcast-2'],
+  },
+  {
+    id: 'playlist-3',
+    name: 'Clásicos Imprescindibles',
+    description: 'Grandes obras de la literatura universal.',
+    coverArt: 'https://picsum.photos/seed/classics/400/400',
+    items: ['book-3'],
+  },
+];
